@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-gray-50 text-foreground;
+  }
+}
+
+@layer utilities {
+  .transition-colors {
+    @apply transition-all duration-200;
+  }
+}
+
+/* Progress bar styling */
+.step-progress .progress-bar {
+  @apply h-1 bg-gray-200 relative;
+}
+
+.step-progress .progress-bar-fill {
+  @apply h-full bg-primary absolute top-0 left-0 transition-all duration-500;
+}
+
+/* File uploader styling */
+.file-uploader {
+  @apply border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-primary transition-colors cursor-pointer;
+}
+
+.file-uploader:hover .upload-icon {
+  @apply text-primary;
+}
